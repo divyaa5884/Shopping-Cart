@@ -8,7 +8,7 @@ class Products extends Component {
     	isLoadedFirst: false
     }
 	removeFromCart = (item) => {
-		var newData = this.state.data.filter((ele)=> {
+		let newData = this.state.data.filter((ele)=> {
 			return item.id !== ele.id;
 		})
 		console.log(newData);
@@ -19,7 +19,7 @@ class Products extends Component {
 		if(item.quantity === 1){
 			// this.removeCart(item);
 		}
-		var newData = this.state.data
+		let newData = this.state.data
 		newData.forEach((ele)=> {
 			if(item.id === ele.id) {
 				item.quantity = item.quantity - 1;
@@ -30,7 +30,7 @@ class Products extends Component {
 	}
 	increaseQuantity = (item) => {
 		console.log("Increase");
-		var newData = this.state.data
+		let newData = this.state.data
 		newData.forEach((ele)=> {
 			if(item.id === ele.id) {
 				item.quantity = item.quantity + 1;
